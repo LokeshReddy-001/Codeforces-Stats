@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stats</title>
+    <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2>Fetching Codeforces Data...</h2>
+        <p>Please wait a moment.</p>
+    </div>
+    <header class = "dashboard-top-bar">
+        <div class = "dashboard-container">
+            <div class = "top-bar"">
+                <div class = "user-info">
+                    <img id="avatar" src="">
+                    <div class = "user-details">
+                        <h2 id = "username">Username</h2>
+                        <p id = "rating">Rating: 0</p>
+                        <p id = "max-rating">Max Rating: 0</p>
+                    </div>
+                </div>
+                <div class = "cf-button" target="_blank">
+                    <a href = "" id = "cf-profile-link">View Codeforces Profile</a>
+                </div>
+                <div class = "home-button">
+                    <a href = "index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="dashboard-content">
+        <section class="card graph-card">
+            <h2>Rating Graph</h2>
+            <canvas id="ratingGraph"></canvas>
+        </section>
+        <div class = "extra-grid">
+            <section class="card extra-card">
+                <h2>Submission Stats</h2>
+                <canvas id="submissionGraph"></canvas>
+            </section>
+
+            <section class="card extra-card">
+                <h2>Problem Difficulty Distribution</h2>
+                <h3 id = "problems-solved">Total Problems Solved: 0</h3>
+                <canvas id="difficultyGraph"></canvas>
+            </section>
+
+            <section class="card extra-card">
+                <h2>Recent Submissions</h2>
+                    <div id="recent-submissions-container">
+                        <div >
+                            <a href = "" id = "recent-submissions-container" target="_blank" class = "submission-box">
+                                <h3>An Alternative Way</h3></a>
+                        </div>
+                        <div >
+                            <a href = "" id = "recent-submissions-link" target="_blank" class = "submission-box">
+                                <h3>An Alternative Way</h3></a>
+                        </div>
+                        <div >
+                            <a href = "" id = "recent-submissions-link" target="_blank" class = "submission-box">
+                                <h3>An Alternative Way</h3></a>
+                        </div>
+                        <div >
+                            <a href = "" id = "recent-submissions-link" target="_blank" class = "submission-box">
+                                <h3>An Alternative Way</h3></a>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="card extra-card">
+                <h2>Strength Analysis and Weaknesses</h2>
+                <div class="tags-location">
+                    <h3 id="tag-special">Common Tag Analysis</h3>
+                    <div id="tag-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="dashboard-footer">
+        <p class = "made-by">Made by Lokesh Reddy</p>
+        <p>&copy; 2024 Codeforces Stats. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>
